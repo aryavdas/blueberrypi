@@ -1,0 +1,19 @@
+#LAUNCH FILE STUFF
+#NAME OF ALUNCH FILE IS dance_lauch.yaml
+launch:
+
+- node:
+    pkg: "blueberrypi"
+    exec: "arm_disarm"
+    name: "blue_rov_Arm"
+    namespace: ""
+- node:
+    pkg: "blueberrypi"
+    exec: "dance"
+    name: "move"
+    namespace: ""
+- node:
+    pkg: "blueberrypi"
+    exec: "pid"
+    name: "PID_depth_subscriber"
+    namespace: ""

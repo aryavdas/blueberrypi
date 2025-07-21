@@ -4,7 +4,7 @@ from std_srvs.srv import SetBool
 
 class BlueROVArm(Node):
     def __init__(self):
-        super().__init__("blue_rov_Arm")    # names the node when running
+        super().__init__("blue_rov_arm")    # names the node when running
         self.cli = self.create_client(SetBool, 'arming')
         while not self.cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
